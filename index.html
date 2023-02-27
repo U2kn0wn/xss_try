@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>xss try</title>
+    <link rel="stylesheet" href="./index.css">
+
+  </head>
+  <body>
+    <form>
+      <input type="text" name="textone" id="textone" value="">
+      <button id="sub" type="button" onclick="trying()">click me</button>
+      <script>
+        function trying() {
+          var a= document.getElementById('textone').value;
+          document.getElementById('parag').innerHTML="you entered: "+a;
+          document.getElementById('parag').style.border="5px solid white";
+
+        }
+
+
+
+      </script>
+      <p id="parag"></p>
+    </form>
+  </body>
+</html>
